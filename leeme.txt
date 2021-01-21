@@ -1,0 +1,31 @@
+El programa ofrecido en esta carpeta puede ser usado ejecutando el archivo Program.py.
+Una vez ejecutado el archivo el usuario se encontrará con un interprete interactivo que permitirá jugar a una versión simplificada del combate de D&D.
+
+Funcionalidad:
+El programa informará al usuario de la situación de su personaje y le pedirá que introduzca el comando de una lista, una vez proporcionado el comando, el programa pedirá información adicional para ejecutar el comando o ejecutará la orden.
+En primer lugar el programa ofrecerá al usuario dos opciones: cerrar el interprete (FIN, la cual será ofrecida siempre), o crear un nuevo personaje (CREAR PERSONAJE).
+En caso de que el usuario elija crear un nuevo personaje se le pedirá que elija una raza (humano o enano de las colinas) y una clase (guerrero o monje), esto determinará parcialmente los atributos del jugador y le permitirá realizar acciones relacionadas con la clase/raza elegidas.
+Una vez que el usuario haya creado su personaje dispondrá de nuevas opciones predefinidas o proporcionadas por la clase o la razas, además podrá elegir pasar el turno (PASR TURNO, momento en el que será atacado por los enemigos presentes).
+En el código entregado, todos los personajes poseen la habilidad de atacar(ATACAR, lo cual costará una acción), además el guerrero puede curarse (SEGUNDO_VIENTO lo cual costará un acción de bonus) y el monje podrá realizar un ataque adicional (ATAQUE_ADICIONAL lo cual costará una acción de bonus).
+El usuario solo podrá realizar una acción, y no podrá volver a realizarla hasta que pase turno, de igual manera, solo podrá volver a realizar una acción de bonus cada vez que pase el turno.
+Cuando el jugador obtenga 50 puntos de experiencia subirá un nivel, momento en que ganará puntos de vida y puntos de vida máximos (basados en la clase).
+En caso de que el guerrero suba un nivel, pasará a disponer una nueva habilidad que le permitirá realizar un ataque adicional (ACCION_ADICIONAL, el cual gastará un acción especial, la cual funcionará igual que la acción o la acción de bonus).
+
+Cumplimiento requisitos:
+Documentación: La documentación está presente en este archivo, el diagrama de clases recibe el nombre UML.png.
+Interprete Interactivo: Toda la aplicación funciona enviando comandos por un interprete interactivo, no se ha podido facilitar la opción de que el inteprete lea un fichero de texto, ya que, dado que la aplicación imita el sistema de combate de D&D, el resultado de cada operación es completamente aleatorio, haciendo imposible anticipar que comandos podrán ser introducidos en cada momento. (Por ejemplo, el guerreo no podrá ejecutar una opción hasta que suba a nivel 2, lo cual ocurrirá en momentos variables dependiendo de la suerte en los "dados").
+En caso de que exista algún problema probando la aplicación esta información debería cubrir todas las necesidades:
+	La funcionalidad de los comando se muestra en el apartado funcionalidad, con mayúsculas cada comando.
+	El interprete mostrará los comandos que pueden ser introducidos y su formato en todo momento mediante el la notación:
+		- comando_1
+		- comando_2
+Cuatro entidades: La aplicación cuenta con más de 4 entidades
+Pruebas unitarias: La aplicación cuenta con un archivo dedicadas a pruebas unitarias, las cuales debido a los motivos detallados anteriormente(aleatoriedad), poseen una capacidad muy limitada de probar la funcionalidad del programa.
+Anotaciones de tipo: Todas las funciones y atributos cuentan con anotaciones de tipos.
+Uso de funciones y/o clases como instancias de primer orden: La creación del personaje utiliza como parametros clases como instancias de primer orden. Además, en otros puntos de la aplicación se utiliza funciones como instancias de primer orden (por ejemplo, para definir un nuevo nombre que permita la llamada de la nueva acción para la clase guerrero).
+Duck typing: El uso de Duck typing se puede ver con claridad en las interfaces Raza y Clase, las cuales, pese a aparecer en el diagrama, no hubieron de ser uusadas gracias al uso de esta carazterísticas.
+Criterio de nombrado (name mangling): El uso de esta carazterística permitió mostrar al usuario y permitirle ejecuta, de forma dinámica, las razas disponibles (todas las razas comienzan con la cadena "Raza_"), las clases disponibles (todas las clases comienzan con la cadena "Clase_") y todas las acciones disponibles (todos lo metodos ejecutables desde el interprete comienzan con la cadena "action_")
+		
+
+
+
