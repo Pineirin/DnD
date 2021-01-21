@@ -1,0 +1,1 @@
+This little game offers the player the ability to play, in command line, a small combat encounter in the game Dungeons and Dragons. It was developed both to test Python skills and to amuse fellow friends.
